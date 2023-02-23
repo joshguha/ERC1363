@@ -84,6 +84,14 @@ contract ERC20BondingCurve is ERC1363, IERC1363Receiver {
         return IERC1363Receiver.onTransferReceived.selector;
     }
 
+    receive() external payable {
+        this.buyTokens("");
+    }
+
+    fallback() external payable {
+        this.buyTokens(msg.data);
+    }
+
     /**
      * @dev Function to override ERC20 mint with transfer checks
      * @param account Address to mint tokens to
