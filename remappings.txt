@@ -3,3 +3,4 @@ erc1363-payable-token/=lib/erc1363-payable-token/
 forge-std/=lib/forge-std/src/
 openzeppelin-contracts/=lib/openzeppelin-contracts/
 @openzeppelin=lib/openzeppelin-contracts/
+prb-math/=lib/prb-math/
