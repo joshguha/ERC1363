@@ -50,16 +50,14 @@ contract ERC20BondingCurve is ERC1363, IERC1363Receiver {
      * @dev Implements IERC1363Receiver
      * @dev Returns ETH to spender
      * @param spender Spender of token
-     * @param sender Transction sender
      * @param amount Amount of tokens received (and therefore bought back and burnt)
-     * @param data Additional data with no specified format
      */
 
     function onTransferReceived(
         address spender,
-        address sender,
+        address,
         uint256 amount,
-        bytes calldata data
+        bytes calldata
     ) external returns (bytes4) {
         /*
             V_out = m (x_0^2 - x_1^2) / 2
