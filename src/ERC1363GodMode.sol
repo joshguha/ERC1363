@@ -15,8 +15,6 @@ import "openzeppelin-contracts/contracts/utils/Address.sol";
 contract ERC1363Sanctions is ERC1363, Ownable {
     using Address for address;
 
-    mapping(address => bool) private banList;
-
     constructor(string memory name, string memory symbol) ERC20(name, symbol) {}
 
     /**

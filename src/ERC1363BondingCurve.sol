@@ -55,7 +55,7 @@ contract ERC20BondingCurve is ERC1363, IERC1363Receiver {
 
     function onTransferReceived(
         address spender,
-        address,
+        address, // sender
         uint256 amount,
         bytes calldata
     ) external returns (bytes4) {

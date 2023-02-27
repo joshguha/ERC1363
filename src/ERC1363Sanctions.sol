@@ -47,7 +47,7 @@ contract ERC1363Sanctions is ERC1363, Ownable {
     function _beforeTokenTransfer(
         address from,
         address to,
-        uint256
+        uint256 // amount
     ) internal view override {
         require(!isBanned(from), "Transfer from banned address");
         require(!isBanned(to), "Transfer to banned address");
